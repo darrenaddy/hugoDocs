@@ -17,8 +17,18 @@ relatedfuncs: []
 deprecated: false
 ---
 
-See [the go doc](https://golang.org/pkg/fmt/) for additional information.
+printf performs a Concatenation function.
+Comparing concatenation in PHP to concatenation in Go (Hugo):
 
+PHP:
+```
+$fullname = $firstname . ' ' . $lastname
+```
+Go:
+```
+{{ $fullname := printf "%s %s" $firstname $lastname }}
+```
+The PHP/Go comparison, above, is taken from Regis Philbert's excellent [Hugo Translator, a cheatsheet](https://www.regisphilibert.com/blog/2017/04/hugo-cheat-sheet-go-template-translator/) .
 ```
 {{ i18n ( printf "combined_%s" $var ) }}
 ```
@@ -26,3 +36,5 @@ See [the go doc](https://golang.org/pkg/fmt/) for additional information.
 ```
 {{ printf "formatted %.2f" 3.1416 }}
 ```
+
+See [the go doc](https://golang.org/pkg/fmt/) for additional information.
